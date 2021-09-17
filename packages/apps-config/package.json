@@ -24,7 +24,7 @@
     "@polkadot/networks": "^7.3.1",
     "@polymathnetwork/polymesh-types": "0.0.2",
     "@snowfork/snowbridge-types": "0.2.5",
-    "@sora-substrate/type-definitions": "1.6.8",
+    "@sora-substrate/type-definitions": "1.6.9",
     "@subsocial/types": "0.6.1-1",
     "@zeitgeistpm/type-defs": "0.2.7",
     "@zeroio/type-definitions": "0.0.6",

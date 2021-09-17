@@ -2482,7 +2482,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@open-web3/orml-type-definitions@npm:^0.9.4-38":
+"@open-web3/orml-type-definitions@npm:^0.9.4-35, @open-web3/orml-type-definitions@npm:^0.9.4-38":
   version: 0.9.4-38
   resolution: "@open-web3/orml-type-definitions@npm:0.9.4-38"
   dependencies:
@@ -2839,7 +2839,7 @@ __metadata:
     "@polkadot/networks": ^7.3.1
     "@polymathnetwork/polymesh-types": 0.0.2
     "@snowfork/snowbridge-types": 0.2.5
-    "@sora-substrate/type-definitions": 1.6.8
+    "@sora-substrate/type-definitions": 1.6.9
     "@subsocial/types": 0.6.1-1
     "@zeitgeistpm/type-defs": 0.2.7
     "@zeroio/type-definitions": 0.0.6
@@ -3771,12 +3771,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sora-substrate/type-definitions@npm:1.6.8":
-  version: 1.6.8
-  resolution: "@sora-substrate/type-definitions@npm:1.6.8"
+"@sora-substrate/type-definitions@npm:1.6.9":
+  version: 1.6.9
+  resolution: "@sora-substrate/type-definitions@npm:1.6.9"
   dependencies:
-    "@open-web3/orml-type-definitions": ^0.8.2-9
-  checksum: 706babdb5f5c73b1bc701fd5e24eb8afd9dadb6343da1f82b70513605e611c847045db6123d4e428bb5316c2c9c880fa3e698c1977d2a44119307d9f45406604
+    "@open-web3/orml-type-definitions": ^0.9.4-35
+  checksum: f688453d71bf7cd830c9f9c288ca0978ad16f83acc376c97ea428b899186bf5c42ff03492f4fb38bead72a146ecec53c7f627debdb22a78958de0bfbf505fc04
   languageName: node
   linkType: hard
 
