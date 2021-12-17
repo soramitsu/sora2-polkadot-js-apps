@@ -16,6 +16,21 @@ import { isUndefined } from '@polkadot/util';
 import { useTranslation } from './translate';
 import { createIdenticon, createOption, save, saveAndReload } from './util';
 
+import type { SubstrateNetwork } from '@polkadot/networks/types';
+
+const ALL_NETWORKS = [
+  ...allNetworks,
+  {
+    prefix: 420,
+    network: 'sora_kusama_para',
+    displayName: 'SORA Kusama Parachain',
+    symbols: ['XOR'],
+    decimals: [18],
+    standardAccount: '*25519',
+    website: 'https://sora.org'
+  } as SubstrateNetwork
+]
+
 interface Props {
   className?: string;
 }
@@ -54,7 +69,7 @@ function General ({ className = '' }: Props): React.ReactElement<Props> {
         ss58Format = 42;
       }
 
-      const network = allNetworks.find(({ prefix }) => prefix === ss58Format);
+      const network = ALL_NETWORKS.find(({ prefix }) => prefix === ss58Format);
 
       return createSs58(t).map((o) =>
         createOption(o, ['default'], 'empty', (

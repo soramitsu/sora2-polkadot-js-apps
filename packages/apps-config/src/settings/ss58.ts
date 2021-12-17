@@ -5,8 +5,22 @@ import type { TFunction } from 'i18next';
 import type { Option } from './types';
 
 import { selectableNetworks } from '@polkadot/networks';
+import type { Network } from '@polkadot/networks/types';
 
-const networks = selectableNetworks
+const SELECTABLE_NETWORKS = [
+  ...selectableNetworks,
+  {
+    prefix: 420,
+    network: 'sora_kusama_para',
+    displayName: 'SORA Kusama Parachain',
+    symbols: ['XOR'],
+    decimals: [18],
+    standardAccount: '*25519',
+    website: 'https://sora.org'
+  } as Network
+]
+
+const networks = SELECTABLE_NETWORKS
   .map(({ displayName, network, prefix }) => ({
     info: network,
     text: displayName,

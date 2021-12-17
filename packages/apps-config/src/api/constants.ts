@@ -5,9 +5,23 @@ import BN from 'bn.js';
 
 import { selectableNetworks } from '@polkadot/networks';
 import { assert } from '@polkadot/util';
+import type { Network } from '@polkadot/networks/types';
+
+const SELECTABLE_NETWORKS = [
+  ...selectableNetworks,
+  {
+    prefix: 420,
+    network: 'sora_kusama_para',
+    displayName: 'SORA Kusama Parachain',
+    symbols: ['XOR'],
+    decimals: [18],
+    standardAccount: '*25519',
+    website: 'https://sora.org'
+  } as Network
+]
 
 function getGenesis (name: string): string {
-  const network = selectableNetworks.find(({ network }) => network === name);
+  const network = SELECTABLE_NETWORKS.find(({ network }) => network === name);
 
   assert(network && network.genesisHash[0], `Unable to find genesisHash for ${name}`);
 
