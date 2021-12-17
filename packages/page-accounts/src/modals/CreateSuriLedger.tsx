@@ -9,13 +9,28 @@ import { Dropdown, MarkError, Modal } from '@polkadot/react-components';
 import { useTranslation } from '../translate';
 import { AVAIL_INDEXES } from './Ledger';
 
+import type { Network } from '@polkadot/networks/types';
+
+const SELECTABLE_NETWORKS = [
+  ...selectableNetworks,
+  {
+    prefix: 420,
+    network: 'sora_kusama_para',
+    displayName: 'SORA Kusama Parachain',
+    symbols: ['XOR'],
+    decimals: [18],
+    standardAccount: '*25519',
+    website: 'https://sora.org'
+  } as Network
+]
+
 interface Props {
   className?: string;
   onChange: (string: string) => void;
   seedType: string;
 }
 
-const ledgerNets = selectableNetworks.filter(({ hasLedgerSupport }) => hasLedgerSupport);
+const ledgerNets = SELECTABLE_NETWORKS.filter(({ hasLedgerSupport }) => hasLedgerSupport);
 
 function CreateSuriLedger ({ className, onChange, seedType }: Props): React.ReactElement<Props> {
   const { t } = useTranslation();
